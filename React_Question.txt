@@ -1,0 +1,26 @@
+// Create a login page using react using two input boxes email and
+//  password and a login button. When you click on the login button, 
+//  the data input by the user should be logged into the browser console.
+
+import React, { useState } from 'react'
+
+const Login = () => {
+    const [email,setEmail]=useState("");
+    const [password,setPassword]=useState("");
+
+    function handleLogin(){
+        console.log("Email is:",email)
+        console.log("Password is:",password)
+    }
+
+  return (
+    <div>
+        <input onChange={(e)=>{setEmail(e.target.value)}} type="email" placeholder='Enter email' /><br />
+        <input onChange={(e)=>{setPassword(e.target.value)}} type="password"placeholder='Enter password' /><br />
+        <button onClick={handleLogin}>Login</button>
+      
+    </div>
+  )
+}
+
+export default Login
